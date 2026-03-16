@@ -14,13 +14,13 @@
 - Vite
 - Git & GitHub
 
+//THE WORKING LINK
+https://enchanting-kelpie-2e27bb.netlify.app/
+
+
 ## Installation
 ```bash
 git clone https://github.com/madhurima7284/EventSync.git
 cd EventSync
 npm install
 npm run dev
-
-#THE WORKING LINK
-
-https://enchanting-kelpie-2e27bb.netlify.app/
