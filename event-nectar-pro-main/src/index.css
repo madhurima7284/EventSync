@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* EventSync Design System - Pastel Palette */
+
+@layer base {
+  :root {
+    /* Core Background & Text */
+    --background: 220 30% 98%;
+    --foreground: 230 25% 18%;
+
+    /* Card surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 230 25% 18%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 25% 18%;
+
+    /* Primary - Soft Blue */
+    --primary: 220 70% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Lavender */
+    --secondary: 260 45% 88%;
+    --secondary-foreground: 260 40% 35%;
+
+    /* Muted */
+    --muted: 220 20% 94%;
+    --muted-foreground: 220 15% 50%;
+
+    /* Accent - Mint */
+    --accent: 165 50% 85%;
+    --accent-foreground: 165 60% 28%;
+
+    /* Destructive */
+    --destructive: 0 65% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 220 20% 88%;
+    --input: 220 20% 92%;
+    --ring: 220 70% 65%;
+
+    --radius: 0.75rem;
+
+    /* Custom EventSync Colors */
+    --peach: 20 80% 85%;
+    --peach-foreground: 20 60% 35%;
+    --lavender: 260 45% 88%;
+    --lavender-foreground: 260 40% 35%;
+    --mint: 165 50% 85%;
+    --mint-foreground: 165 60% 28%;
+    --sky: 200 70% 88%;
+    --sky-foreground: 200 60% 30%;
+
+    /* Featured/Highlight gradient */
+    --gradient-featured: linear-gradient(135deg, hsl(260 45% 88%) 0%, hsl(200 70% 88%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 70% 65%) 0%, hsl(260 60% 70%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(220 30% 20% / 0.08);
+    --shadow-card: 0 4px 16px -4px hsl(220 30% 20% / 0.1);
+    --shadow-elevated: 0 8px 32px -8px hsl(220 30% 20% / 0.15);
+
+    /* Sidebar (keeping for compatibility) */
+    --sidebar-background: 220 30% 98%;
+    --sidebar-foreground: 230 25% 18%;
+    --sidebar-primary: 220 70% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 165 50% 85%;
+    --sidebar-accent-foreground: 165 60% 28%;
+    --sidebar-border: 220 20% 88%;
+    --sidebar-ring: 220 70% 65%;
+  }
+
+  .dark {
+    --background: 230 25% 10%;
+    --foreground: 220 20% 95%;
+
+    --card: 230 22% 14%;
+    --card-foreground: 220 20% 95%;
+
+    --popover: 230 22% 14%;
+    --popover-foreground: 220 20% 95%;
+
+    --primary: 220 70% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 30% 25%;
+    --secondary-foreground: 260 30% 85%;
+
+    --muted: 230 20% 20%;
+    --muted-foreground: 220 15% 60%;
+
+    --accent: 165 40% 25%;
+    --accent-foreground: 165 40% 85%;
+
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 230 20% 22%;
+    --input: 230 20% 22%;
+    --ring: 220 70% 60%;
+
+    --peach: 20 50% 25%;
+    --peach-foreground: 20 60% 85%;
+    --lavender: 260 30% 25%;
+    --lavender-foreground: 260 30% 85%;
+    --mint: 165 40% 22%;
+    --mint-foreground: 165 40% 85%;
+    --sky: 200 40% 25%;
+    --sky-foreground: 200 50% 85%;
+
+    --sidebar-background: 230 25% 10%;
+    --sidebar-foreground: 220 20% 95%;
+    --sidebar-primary: 220 70% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 165 40% 25%;
+    --sidebar-accent-foreground: 165 40% 85%;
+    --sidebar-border: 230 20% 22%;
+    --sidebar-ring: 220 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .bg-gradient-featured {
+    background: var(--gradient-featured);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+}
